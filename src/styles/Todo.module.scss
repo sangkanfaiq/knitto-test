@@ -1,0 +1,191 @@
+$whitecolor: #F5F5F5;
+$blackcolor: #050406;
+$lightblack: #191919;
+$ash: #393838;
+$lightred: #d03b65;
+$darkredcolor: #a12e4e;
+$greencolor: #17B978;
+$darkgreencolor: #158558;
+
+.title {
+    padding-top: 3em;
+    h1 {
+        color: $whitecolor;
+        font-weight: 400;
+        text-align: center;
+        font-size: 3.5em;
+
+        span {
+            font-weight: 600;
+        }
+    }
+    
+}
+.content {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 5em;
+    // gap: 2.5em;
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
+
+    .wrapper {
+        width: 50%;
+
+        @media screen and (max-width: 768px) {
+            width: 100%;
+        }
+
+        h2 {
+            color: $whitecolor;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 1em;
+        }
+
+        button {
+            color: $whitecolor;
+            display: flex;
+            align-items: center;
+            background: $blackcolor;
+            width: 100%;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 3px 1em;
+            border: 1px dashed $lightred;
+            text-align: left;
+            transition: .3s ease-in-out;
+            border-radius: 5px;
+
+            .icon {
+                font-size: 22px;
+                background: transparent;
+                margin-right: .5em;
+                transition: .3s;
+            }
+
+            &:hover {
+                background: $lightred;
+
+                .icon {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+        .listcontent {
+            padding: 5px 0;
+            background: $lightblack;
+            margin: 1em 0;
+            display: flex;
+            align-items: center;
+            border-radius: 5px;
+            cursor: pointer;
+
+            h5 {
+                color: $whitecolor;
+                padding-left: .5em;
+                background: transparent;
+                margin: 0;
+                width: 35px;
+                font-size: 14px;
+            }
+
+            &:hover {
+                background: $ash;
+            }
+
+            .checkbox {
+                width: 20px;
+                height: 20px;
+                margin: 0 1em;
+                border: 2px solid $lightred;
+                background: transparent;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+
+               
+
+                img {
+                    margin-top: -5px;
+                    margin-left: -1px;
+                    background: transparent;
+                }
+            }
+            p {
+                margin: 0;
+                background: transparent;
+                font-size: 14px;
+            }
+            .finished {
+                color: $greencolor;
+            }
+            .unfinished {
+                color: $whitecolor;
+            }
+        }
+    }
+}
+.modalBg {
+    background: rgba($color: $whitecolor, $alpha: .1);
+
+    .modalAdd {
+        background: transparent;
+
+        @media screen and (max-width: 991px){
+            margin: 0 2em;
+        }
+
+        .buttonclose {
+            background: transparent;
+            border: none;
+            outline: none;
+
+            &:hover {
+                background: rgba($color: #fff, $alpha: .1);
+                border-radius: 50%;
+                .icon {
+                    transform: rotate(180deg);
+                }
+            }
+            .icon {
+                background: transparent;
+                transition: .3s;
+            }
+        }
+        input {
+            width: 100%;
+            border: 1px solid $whitecolor;
+            background: transparent;
+            padding: .5em 1em;
+            outline: none;
+            font-size: 14px;
+            font-weight: 500;
+            border-radius: 5px;
+            color: $whitecolor;
+        }
+        .add {
+            background: $darkgreencolor;
+            color: $whitecolor;
+            font-weight: 600;
+            font-size: 14px;
+
+            &:hover {
+                background: $greencolor;
+            }
+        }
+        .cancel {
+            background: $darkredcolor;
+            color: $whitecolor;
+            font-weight: 600;
+            font-size: 14px;
+
+            &:hover {
+                background: $lightred;
+            }
+        }
+    }
+}
