@@ -28,6 +28,7 @@ ToDo App
 - API fetch using redux-toolkit
 - Render page using SSR
 - Alert(Task completed & Post success)
+- Pagination
 
 ### Author
 [Sangkan Faiq](https://github.com/sangkanfaiq)
